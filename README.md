@@ -22,7 +22,7 @@ A GPT-4 powered chatbot that can answer questions about VA benefits and services
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd va_chatbot
+cd chatbot-ai
 ```
 
 2. Set up Python environment using pyenv:
