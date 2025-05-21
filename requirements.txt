@@ -1,9 +1,10 @@
 langchain==0.1.12
-langchain-community>=0.0.28,<0.1
+langchain-community<0.1,>=0.0.28
 openai==0.28.1
 chromadb==0.4.17
-beautifulsoup4==4.12.3
+beautifulsoup4==4.12.2
 requests==2.31.0
 python-dotenv==1.0.1
 streamlit==1.32.2
-tiktoken==0.6.0 
+tiktoken==0.6.0
+playwright==1.42.0 

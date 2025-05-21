@@ -31,19 +31,22 @@ class DocumentProcessor:
         self.client = chromadb.Client()
         self.embedding_function = CustomOpenAIEmbeddingFunction()
         
-        # Delete existing collection if it exists
+        # Try to get existing collection, create if it doesn't exist
         try:
-            self.client.delete_collection(collection_name)
+            self.collection = self.client.get_collection(
+                name=collection_name,
+                embedding_function=self.embedding_function
+            )
         except:
-            pass
-            
-        # Create new collection
-        self.collection = self.client.create_collection(
-            name=collection_name,
-            embedding_function=self.embedding_function
-        )
+            # Create new collection if it doesn't exist
+            self.collection = self.client.create_collection(
+                name=collection_name,
+                embedding_function=self.embedding_function
+            )
+            # Process documents if this is a new collection
+            self.process_documents("va_content.json")
 
-    def process_documents(self, json_file: str, chunk_size: int = 500):
+    def process_documents(self, json_file: str, chunk_size: int = 300):
         """
         Process documents from JSON file and add to vector store
         """
@@ -90,7 +93,7 @@ class DocumentProcessor:
 
         return chunks
 
-    def query_documents(self, query: str, n_results: int = 3) -> List[Dict]:
+    def query_documents(self, query: str, n_results: int = 8) -> List[Dict]:
         """
         Query the vector store for relevant documents
         """
