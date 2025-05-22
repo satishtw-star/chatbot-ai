@@ -87,6 +87,13 @@ class VAScraper:
                 page_links = []
                 seen_urls = set()
                 
+                # Keywords that indicate a link is sign-in related
+                sign_in_keywords = [
+                    'sign-in', 'signin', 'login', 'log-in', 'account', 'profile',
+                    'verify', 'authentication', 'identity', 'credentials', 'password',
+                    'security', 'access', 'myva', 'my.va', 'id.me', 'login.gov'
+                ]
+                
                 # Find all clickable elements (links, buttons, etc.)
                 clickable_elements = page.query_selector_all('a, button, [role="button"], [role="link"]')
                 
@@ -99,6 +106,14 @@ class VAScraper:
                             
                         # Get text content
                         link_text = element.text_content().strip()
+                        
+                        # Skip if link text is too short (likely a navigation item)
+                        if len(link_text) < 10:
+                            continue
+                        
+                        # Skip if link text doesn't contain sign-in related keywords
+                        if not any(keyword in link_text.lower() for keyword in sign_in_keywords):
+                            continue
                         
                         # Convert relative URLs to absolute
                         if href.startswith('/'):
@@ -132,7 +147,13 @@ class VAScraper:
                 title = page.title()
                 content = main_content.get_text(separator=' ', strip=True) if main_content else ""
                 
-                print(f"[DEBUG] Found {len(page_links)} links on sign-in page")
+                # Skip if content is too short
+                if len(content) < 200:  # Minimum content length threshold
+                    print(f"[DEBUG] Skipping page with insufficient content: {url}")
+                    page.close()
+                    return None
+                
+                print(f"[DEBUG] Found {len(page_links)} sign-in related links on page")
                 page.close()
                 return {
                     "url": url,
@@ -150,35 +171,60 @@ class VAScraper:
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            for element in soup(['script', 'style', 'nav', 'header', 'footer']):
+            # Remove navigation elements
+            for element in soup(['script', 'style', 'nav', 'header', 'footer', 'aside']):
                 element.decompose()
+                
             main_content = soup.find('main')
             if not main_content:
                 main_content = soup.find('article')
             if not main_content:
                 main_content = soup.find('body')
+                
             title = soup.title.string if soup.title else ""
             content = main_content.get_text(separator=' ', strip=True) if main_content else ""
+            
+            # Skip if content is too short or if it's just a navigation page
+            if len(content) < 200 or len(title.split()) < 3:  # Minimum content length and title word count
+                print(f"[DEBUG] Skipping page with insufficient content: {url}")
+                return None
+                
             page_links = []
-            if len(content) > 100:  # Minimum content length threshold
-                return {
-                    "url": url,
-                    "title": title,
-                    "content": content,
-                    "type": "content",
-                    "links": page_links
-                }
-            return None
+            return {
+                "url": url,
+                "title": title,
+                "content": content,
+                "type": "content",
+                "links": page_links
+            }
         except Exception as e:
             print(f"Error scraping {url}: {str(e)}")
             return None
 
     def crawl_va_pages(self, start_url: str, max_pages: int = 100) -> List[Dict]:
         """
-        Crawl VA.gov starting from a specific URL
+        Crawl VA.gov starting from a specific URL, only following sign-in related links
         """
         pages_data = []
         to_visit = [start_url]
+        
+        # Keywords that indicate a page is sign-in related
+        sign_in_keywords = [
+            'sign-in', 'signin', 'login', 'log-in', 'account', 'profile',
+            'verify', 'authentication', 'identity', 'credentials', 'password',
+            'security', 'access', 'myva', 'my.va', 'id.me', 'login.gov'
+        ]
+        
+        def is_sign_in_related(url: str, title: str = "", content: str = "") -> bool:
+            """Check if a URL or its content is related to sign-in functionality"""
+            # Check URL
+            url_lower = url.lower()
+            if any(keyword in url_lower for keyword in sign_in_keywords):
+                return True
+                
+            # Check title and content if provided
+            text_to_check = (title + " " + content).lower()
+            return any(keyword in text_to_check for keyword in sign_in_keywords)
         
         while to_visit and len(pages_data) < max_pages:
             current_url = to_visit.pop(0)
@@ -191,40 +237,46 @@ class VAScraper:
             
             print(f"Scraping ({len(pages_data)}/{max_pages}): {current_url}")
             page_data = self.get_page_content(current_url)
-            if page_data:
-                pages_data.append(page_data)
-                print(f"Successfully scraped: {current_url}")
-                
-                # If this is a resource page, add its article links to the queue
-                if page_data.get('type') == 'resource':
-                    for link in page_data.get('links', []):
-                        if link['url'] not in self.visited_urls and link['url'] not in to_visit:
-                            to_visit.append(link['url'])
             
-            try:
-                response = requests.get(current_url, timeout=10)
-                soup = BeautifulSoup(response.text, 'html.parser')
-                
-                # Find all links
-                for link in soup.find_all('a', href=True):
-                    href = link['href']
+            if page_data:
+                # Only add the page if it's sign-in related
+                if is_sign_in_related(current_url, page_data.get('title', ''), page_data.get('content', '')):
+                    pages_data.append(page_data)
+                    print(f"Successfully scraped sign-in related page: {current_url}")
                     
-                    # Convert relative URLs to absolute
-                    if href.startswith('/'):
-                        full_url = self.base_url + href
-                    elif href.startswith(self.base_url):
-                        full_url = href
-                    else:
-                        continue
-                    
-                    # Clean and validate URL
-                    full_url = self.clean_url(full_url)
-                    if self.is_valid_url(full_url) and full_url not in self.visited_urls and full_url not in to_visit:
-                        to_visit.append(full_url)
+                    # Only follow links from sign-in related pages
+                    try:
+                        response = requests.get(current_url, timeout=10)
+                        soup = BeautifulSoup(response.text, 'html.parser')
                         
-            except Exception as e:
-                print(f"Error processing links from {current_url}: {str(e)}")
-                
+                        # Find all links
+                        for link in soup.find_all('a', href=True):
+                            href = link['href']
+                            link_text = link.get_text().strip()
+                            
+                            # Convert relative URLs to absolute
+                            if href.startswith('/'):
+                                full_url = self.base_url + href
+                            elif href.startswith(self.base_url):
+                                full_url = href
+                            else:
+                                continue
+                            
+                            # Clean and validate URL
+                            full_url = self.clean_url(full_url)
+                            
+                            # Only add to queue if it's a valid, unvisited URL and appears to be sign-in related
+                            if (self.is_valid_url(full_url) and 
+                                full_url not in self.visited_urls and 
+                                full_url not in to_visit and
+                                is_sign_in_related(full_url, link_text)):
+                                to_visit.append(full_url)
+                                
+                    except Exception as e:
+                        print(f"Error processing links from {current_url}: {str(e)}")
+                else:
+                    print(f"Skipping non-sign-in related page: {current_url}")
+                        
         return pages_data
 
     def save_to_json(self, data: List[Dict], filename: str):
@@ -237,10 +289,10 @@ class VAScraper:
 if __name__ == "__main__":
     scraper = VAScraper()
     
-    # Only focus on the sign-in page
-    start_urls = [
-        "https://www.va.gov/sign-in/"
-    ]
+    # Load start_urls from config file
+    with open("scraper_config.json", "r") as f:
+        config = json.load(f)
+    start_urls = config.get("start_urls", ["https://www.va.gov/sign-in/"])
     
     all_pages_data = []
     for url in start_urls:

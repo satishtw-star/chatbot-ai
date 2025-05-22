@@ -6,10 +6,6 @@
     "type": "sign-in",
     "links": [
       {
-        "url": "https://www.va.gov/",
-        "text": ""
-      },
-      {
         "url": "https://www.va.gov/resources/creating-an-account-for-vagov",
         "text": "Learn about creating a Login.gov or ID.me account"
       },
@@ -32,118 +28,7 @@
       {
         "url": "https://www.va.gov/resources/support-for-common-logingov-and-idme-issues/",
         "text": "Common issues with Login.gov or ID.me"
-      },
-      {
-        "url": "https://www.va.gov/homeless/",
-        "text": "Homeless Veterans"
-      },
-      {
-        "url": "https://www.va.gov/womenvet/",
-        "text": "Women Veterans"
-      },
-      {
-        "url": "https://www.va.gov/centerforminorityveterans/",
-        "text": "Minority Veterans"
-      },
-      {
-        "url": "https://www.va.gov/outreach-and-events/events/",
-        "text": "VA outreach events"
-      },
-      {
-        "url": "https://www.va.gov/find-forms/",
-        "text": "VA forms"
-      },
-      {
-        "url": "https://www.va.gov/get-help-from-accredited-representative",
-        "text": "Get help from an accredited representative or VSO"
-      },
-      {
-        "url": "https://www.va.gov/opal/fo/dbwva.asp",
-        "text": "Doing business with VA"
-      },
-      {
-        "url": "https://www.va.gov/jobs/",
-        "text": "Careers at VA"
-      },
-      {
-        "url": "https://www.va.gov/outreach-and-events/outreach-materials",
-        "text": "VA outreach materials"
-      },
-      {
-        "url": "https://www.va.gov/welcome-kit/",
-        "text": "Your VA welcome kit"
-      },
-      {
-        "url": "https://www.va.gov/opa/pressrel/",
-        "text": "Press releases"
-      },
-      {
-        "url": "https://www.va.gov/resources/",
-        "text": "Resources and support"
-      },
-      {
-        "url": "https://www.va.gov/contact-us/",
-        "text": "Contact us"
-      },
-      {
-        "url": "https://www.va.gov/find-locations/",
-        "text": "Find a VA location"
-      },
-      {
-        "url": "https://www.va.gov/asistencia-y-recursos-en-espanol",
-        "text": "Español"
-      },
-      {
-        "url": "https://www.va.gov/tagalog-wika-mapagkukunan-at-tulong",
-        "text": "Tagalog"
-      },
-      {
-        "url": "https://www.va.gov/resources/how-to-get-free-language-assistance-from-va/",
-        "text": "Other languages"
-      },
-      {
-        "url": "https://www.va.gov/accessibility-at-va",
-        "text": "508 compliance"
-      },
-      {
-        "url": "https://www.va.gov/resources/your-civil-rights-and-how-to-file-a-discrimination-complaint/",
-        "text": "Civil Rights"
-      },
-      {
-        "url": "https://www.va.gov/report-harassment/",
-        "text": "Harassment"
-      },
-      {
-        "url": "https://www.va.gov/oig/",
-        "text": "Office of Inspector General"
-      },
-      {
-        "url": "https://www.va.gov/opa/Plain_Language.asp",
-        "text": "Plain language"
-      },
-      {
-        "url": "https://www.va.gov/privacy-policy/",
-        "text": "Privacy, policies, and legal information"
-      },
-      {
-        "url": "https://www.va.gov/ORM/NoFEAR_Select.asp",
-        "text": "No FEAR Act Data"
-      },
-      {
-        "url": "https://www.va.gov/performance-dashboard/",
-        "text": "VA performance dashboard"
-      },
-      {
-        "url": "https://www.va.gov/veterans-portrait-project/",
-        "text": "Veterans Portrait Project"
       }
     ]
-  },
-  {
-    "url": "https://www.va.gov/",
-    "title": "VA.gov Home | Veterans Affairs",
-    "content": "Welcome to VA.gov Let us help you get started Whether you’re a Veteran, service member, or family member, we’re here to help you get the care and benefits you deserve. Create an account to manage your VA benefits and care in one place — any time, from anywhere. Search Other search tools Top pages VA\n            NEWS With the VA Health and Benefits App, you can refill prescriptions, message your care team or check your VA benefits using your smartphone. Explore VA benefits and health care Apply for VA health care, find out how to access services, and manage your health and benefits online. File a claim for disability compensation for conditions related to your military service, and manage your benefits over time. Apply for and manage your GI Bill and other education benefits to help pay for college and training programs. Apply for vocational rehabilitation services, get support for your Veteran-owned small business, and access other career resources. Apply for monthly payments for wartime Veterans and survivors with limited or no income who meet certain age and disability requirements. Find out if you're eligible for a VA-backed home loan. If you have a service-connected disability, see if you qualify for a housing grant to help you live more independently. Explore VA life insurance options for Veterans, service members, and families. Manage your policy online, file claims for benefits, and access helpful resources. Get help planning a burial in a VA national cemetery, order a headstone or other memorial item to honor a Veteran's service, and apply for survivor and dependent benefits. Apply for a printed Veteran ID card, get your VA benefit letters and medical records, and learn how to apply for a discharge upgrade. Find out what benefits you may be eligible for during service and which time-sensitive benefits to consider when separating or retiring. Learn about the benefits you may qualify for as a spouse, dependent, or survivor. And find out what you're eligible for as a family member caring for a Veteran with disabilities. Learn more about the VA departments that manage our benefit and health care programs. Feedback",
-    "type": "content",
-    "links": []
   }
 ]

@@ -9,6 +9,7 @@ A GPT-4 powered chatbot that can answer questions about VA benefits and services
 - Vector storage using ChromaDB
 - GPT-4 powered chat interface using Streamlit
 - Retrieval Augmented Generation (RAG) for accurate, source-backed responses
+- Support for multiple LLMs (OpenAI and Claude) with model selection dropdowns
 
 ## Prerequisites
 
@@ -84,3 +85,36 @@ Note: Option A is recommended as it ensures optimal performance and better compa
 
 6. Create a `.env` file in the root directory and add your OpenAI API key:
 ```
+OPENAI_API_KEY=your_openai_api_key_here
+ANTHROPIC_API_KEY=your_claude_api_key_here
+```
+
+## Running the Scraper and Embeddings
+
+1. Run the scraper to collect VA.gov content:
+```bash
+python scraper.py
+```
+
+2. Generate embeddings from the scraped content:
+```bash
+python embeddings.py
+```
+
+## Running the Chatbot
+
+1. Start the Streamlit app:
+```bash
+streamlit run chatbot.py
+```
+
+2. Access the chatbot in your browser at:
+   - http://localhost:8501
+
+3. Use the dropdowns to select two LLMs (OpenAI and Claude) and ask questions about VA benefits and services.
+
+## Additional Notes
+
+- The chatbot supports multiple LLMs, including OpenAI's GPT-4 and GPT-3.5, and Anthropic's Claude models.
+- Each model is tagged as "Cheap" or "Expensive" for clarity.
+- The bot displays responses from both selected models side by side.
