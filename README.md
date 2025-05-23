@@ -113,6 +113,31 @@ streamlit run chatbot.py
 
 3. Use the dropdowns to select two LLMs (OpenAI and Claude) and ask questions about VA benefits and services.
 
+## LLM Comparison Dashboard
+
+After running the chatbot and generating chat logs, you can compare and analyze model responses and DeepEval scores using the included dashboard:
+
+1. Start the dashboard app:
+   ```bash
+   streamlit run compare_llm_results.py
+   ```
+2. The dashboard will display a table of all chat turns, with columns:
+   - `timestamp`, `user utterance`, `model1`, `response1`, `score1`, `model2`, `response2`, `score2`
+   - The table uses the full width of the page for easier viewing.
+3. You can filter by user utterance, sort by score difference, and view score distributions and best examples.
+
+This makes it easy to compare LLM outputs and evaluation scores side by side.
+
+## LLM Evaluation and Comparison Setup
+
+To enable automatic evaluation and comparison of LLM responses, install the DeepEval library:
+
+```bash
+pip install deepeval
+```
+
+This is required for the LLM Comparison Dashboard and for logging DeepEval scores in the chatbot.
+
 ## Additional Notes
 
 - The chatbot supports multiple LLMs, including OpenAI's GPT-4 and GPT-3.5, and Anthropic's Claude models.

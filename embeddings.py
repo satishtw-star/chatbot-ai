@@ -9,22 +9,21 @@ load_dotenv()
 
 class CustomOpenAIEmbeddingFunction:
     def __init__(self):
-        openai.api_key = os.getenv("OPENAI_API_KEY")
+        self.api_key = os.getenv("OPENAI_API_KEY")
         self.model = "text-embedding-3-small"
+        self.client = openai.OpenAI(api_key=self.api_key)
 
     def __call__(self, input: List[str]) -> List[List[float]]:
         # Handle empty input
         if not input:
             return []
-        
         # Get embeddings from OpenAI
-        response = openai.Embedding.create(
+        response = self.client.embeddings.create(
             model=self.model,
             input=input
         )
-        
         # Extract embeddings from response
-        return [item['embedding'] for item in response['data']]
+        return [item.embedding for item in response.data]
 
 class DocumentProcessor:
     def __init__(self, collection_name: str = "va_docs"):

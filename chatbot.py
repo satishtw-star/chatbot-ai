@@ -6,13 +6,17 @@ import os
 from dotenv import load_dotenv
 import openai
 import anthropic
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.test_case import LLMTestCase
+import csv
+from datetime import datetime
 
 load_dotenv()
 
 class VAChatbot:
     def __init__(self):
         self.doc_processor = DocumentProcessor()
-        openai.api_key = os.getenv("OPENAI_API_KEY")
+        self.openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         anthropic.api_key = os.getenv("ANTHROPIC_API_KEY")  # Load Claude API key
         # Define available models with their tags
         self.available_models = {
@@ -71,7 +75,7 @@ class VAChatbot:
         Returns: (is_safe, reason)
         """
         try:
-            response = openai.Moderation.create(input=text)
+            response = self.openai_client.moderations.create(input=text)
             result = response.results[0]
             
             if result.flagged:
@@ -196,6 +200,37 @@ I can help you with VA benefits, services, and administrative questions."""
         # Check if the responses are appropriate
         is_safe1, reason1 = self.check_moderation(response1.content)
         is_safe2, reason2 = self.check_moderation(response2.content)
+
+        # --- DeepEval integration ---
+        test_case1 = LLMTestCase(input=query, actual_output=response1.content)
+        test_case2 = LLMTestCase(input=query, actual_output=response2.content)
+        metric = AnswerRelevancyMetric()
+        score1 = metric.measure(test_case1)
+        score2 = metric.measure(test_case2)
+        print(f"[DeepEval] Model 1 ({model1}) relevancy: {score1}")
+        print(f"[DeepEval] Model 2 ({model2}) relevancy: {score2}")
+        # Optionally, you could log these scores to a file or database for later analysis
+        # --- End DeepEval integration ---
+
+        # --- Logging to CSV ---
+        log_row = {
+            'timestamp': datetime.now().isoformat(),
+            'prompt': query,
+            'model1': model1,
+            'model2': model2,
+            'response1': response1.content,
+            'response2': response2.content,
+            'score1': score1,
+            'score2': score2
+        }
+        log_file = 'chat_eval_log.csv'
+        file_exists = os.path.isfile(log_file)
+        with open(log_file, 'a', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=log_row.keys())
+            if not file_exists:
+                writer.writeheader()
+            writer.writerow(log_row)
+        # --- End Logging ---
 
         if not is_safe1:
             # Show the actual response for debugging

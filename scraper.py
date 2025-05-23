@@ -7,6 +7,7 @@ import time
 import urllib.parse
 import re
 from playwright.sync_api import sync_playwright
+import openai
 
 class VAScraper:
     def __init__(self):
@@ -302,4 +303,13 @@ if __name__ == "__main__":
         print(f"Completed crawl from {url}. Total pages so far: {len(all_pages_data)}")
     
     print(f"\nScraping completed. Total pages scraped: {len(all_pages_data)}")
-    scraper.save_to_json(all_pages_data, "va_content.json") 
+    scraper.save_to_json(all_pages_data, "va_content.json")
+
+    # Example usage of the new OpenAI API
+    api_key = os.getenv("OPENAI_API_KEY")
+    client = openai.OpenAI(api_key=api_key)
+    response = client.embeddings.create(
+        model="text-embedding-3-small",
+        input="your text here"
+    )
+    embedding = response.data[0].embedding 
