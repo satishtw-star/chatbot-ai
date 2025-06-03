@@ -26,7 +26,16 @@ if st.checkbox("Sort by which model is better (score diff)"):
 renamed_df = df.rename(columns={
     'prompt': 'user utterance'
 })
-st.dataframe(renamed_df[['timestamp', 'user utterance', 'model1', 'response1', 'score1', 'model2', 'response2', 'score2']], use_container_width=True)
+# List all possible columns in your preferred order
+all_columns = [
+    'timestamp', 'user utterance', 'model1', 'response1', 'score1',
+    'faithfulness1', 'contextual_precision1', 'contextual_recall1', 'contextual_relevancy1',
+    'model2', 'response2', 'score2',
+    'faithfulness2', 'contextual_precision2', 'contextual_recall2', 'contextual_relevancy2'
+]
+# Only use columns that exist in the DataFrame
+display_columns = [col for col in all_columns if col in renamed_df.columns]
+st.dataframe(renamed_df[display_columns], use_container_width=True)
 
 # Visualize score distributions
 st.subheader("Score Distributions")

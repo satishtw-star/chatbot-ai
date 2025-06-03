@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 import openai
 import anthropic
-from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.metrics import AnswerRelevancyMetric, FaithfulnessMetric, ContextualPrecisionMetric, ContextualRecallMetric, ContextualRelevancyMetric
 from deepeval.test_case import LLMTestCase
 import csv
 from datetime import datetime
@@ -202,14 +202,73 @@ I can help you with VA benefits, services, and administrative questions."""
         is_safe2, reason2 = self.check_moderation(response2.content)
 
         # --- DeepEval integration ---
+        # Faithfulness metric
+        faith_test_case1 = LLMTestCase(input=query, actual_output=response1.content, retrieval_context=[context])
+        faith_test_case2 = LLMTestCase(input=query, actual_output=response2.content, retrieval_context=[context])
+        faithfulness_metric = FaithfulnessMetric()
+        faith1 = faithfulness_metric.measure(faith_test_case1)
+        faith2 = faithfulness_metric.measure(faith_test_case2)
+
+        # Contextual Precision
+        cprec_test_case1 = LLMTestCase(
+            input=query,
+            actual_output=response1.content,
+            expected_output=response1.content,
+            retrieval_context=[context]
+        )
+        cprec_test_case2 = LLMTestCase(
+            input=query,
+            actual_output=response2.content,
+            expected_output=response2.content,
+            retrieval_context=[context]
+        )
+        contextual_precision_metric = ContextualPrecisionMetric()
+        cprec1 = contextual_precision_metric.measure(cprec_test_case1)
+        cprec2 = contextual_precision_metric.measure(cprec_test_case2)
+
+        # Contextual Recall
+        crec_test_case1 = LLMTestCase(
+            input=query,
+            actual_output=response1.content,
+            expected_output=response1.content,
+            retrieval_context=[context]
+        )
+        crec_test_case2 = LLMTestCase(
+            input=query,
+            actual_output=response2.content,
+            expected_output=response2.content,
+            retrieval_context=[context]
+        )
+        contextual_recall_metric = ContextualRecallMetric()
+        crec1 = contextual_recall_metric.measure(crec_test_case1)
+        crec2 = contextual_recall_metric.measure(crec_test_case2)
+
+        # Contextual Relevancy
+        crel_test_case1 = LLMTestCase(
+            input=query,
+            actual_output=response1.content,
+            expected_output=response1.content,
+            retrieval_context=[context]
+        )
+        crel_test_case2 = LLMTestCase(
+            input=query,
+            actual_output=response2.content,
+            expected_output=response2.content,
+            retrieval_context=[context]
+        )
+        contextual_relevancy_metric = ContextualRelevancyMetric()
+        crel1 = contextual_relevancy_metric.measure(crel_test_case1)
+        crel2 = contextual_relevancy_metric.measure(crel_test_case2)
+
+        # Answer Relevancy (no retrieval_context/expected_output needed)
         test_case1 = LLMTestCase(input=query, actual_output=response1.content)
         test_case2 = LLMTestCase(input=query, actual_output=response2.content)
-        metric = AnswerRelevancyMetric()
-        score1 = metric.measure(test_case1)
-        score2 = metric.measure(test_case2)
-        print(f"[DeepEval] Model 1 ({model1}) relevancy: {score1}")
-        print(f"[DeepEval] Model 2 ({model2}) relevancy: {score2}")
-        # Optionally, you could log these scores to a file or database for later analysis
+        relevancy_metric = AnswerRelevancyMetric()
+        score1 = relevancy_metric.measure(test_case1)
+        score2 = relevancy_metric.measure(test_case2)
+
+        print(f"[DeepEval] Model 1 ({model1}) relevancy: {score1}, faithfulness: {faith1}, contextual precision: {cprec1}, contextual recall: {crec1}, contextual relevancy: {crel1}")
+        print(f"[DeepEval] Model 2 ({model2}) relevancy: {score2}, faithfulness: {faith2}, contextual precision: {cprec2}, contextual recall: {crec2}, contextual relevancy: {crel2}")
         # --- End DeepEval integration ---
 
         # --- Logging to CSV ---
@@ -221,7 +280,15 @@ I can help you with VA benefits, services, and administrative questions."""
             'response1': response1.content,
             'response2': response2.content,
             'score1': score1,
-            'score2': score2
+            'score2': score2,
+            'faithfulness1': faith1,
+            'faithfulness2': faith2,
+            'contextual_precision1': cprec1,
+            'contextual_precision2': cprec2,
+            'contextual_recall1': crec1,
+            'contextual_recall2': crec2,
+            'contextual_relevancy1': crel1,
+            'contextual_relevancy2': crel2
         }
         log_file = 'chat_eval_log.csv'
         file_exists = os.path.isfile(log_file)
