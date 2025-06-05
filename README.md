@@ -85,7 +85,7 @@ Note: Option A is recommended as it ensures optimal performance and better compa
 
 6. Create a `.env` file in the root directory and add your OpenAI API key:
 ```
-OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=your_openai_api_key
 ANTHROPIC_API_KEY=your_claude_api_key_here
 ```
 
@@ -143,3 +143,40 @@ This is required for the LLM Comparison Dashboard and for logging DeepEval score
 - The chatbot supports multiple LLMs, including OpenAI's GPT-4 and GPT-3.5, and Anthropic's Claude models.
 - Each model is tagged as "Cheap" or "Expensive" for clarity.
 - The bot displays responses from both selected models side by side.
+
+## Evaluation
+
+The chatbot automatically saves chat history to `chat_history.json`. To run evaluations on the collected conversations:
+
+```bash
+python run_evaluation.py
+```
+
+This will:
+- Load the chat history
+- Run various metrics (relevancy, faithfulness, contextual precision, etc.)
+- Save results to `chat_eval_log.csv`
+
+## Dashboard
+
+View evaluation results and compare model performance:
+
+```bash
+streamlit run dashboard.py
+```
+
+The dashboard shows:
+- Side-by-side comparison of model responses
+- Individual metrics for each response
+- Best and worst examples
+- Metric distributions
+- Ability to sort and filter results
+
+## Project Structure
+
+- `chatbot.py`: Main chatbot interface
+- `deep_eval.py`: Deep evaluation logic
+- `run_evaluation.py`: Script to run evaluations
+- `dashboard.py`: Visualization of evaluation results
+- `chat_history.json`: Stored conversations
+- `chat_eval_log.csv`: Evaluation metrics

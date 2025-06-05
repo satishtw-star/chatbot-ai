@@ -6,10 +6,10 @@ import os
 from dotenv import load_dotenv
 import openai
 import anthropic
-from deepeval.metrics import AnswerRelevancyMetric, FaithfulnessMetric, ContextualPrecisionMetric, ContextualRecallMetric, ContextualRelevancyMetric
-from deepeval.test_case import LLMTestCase
+from deep_eval import DeepEvaluator
 import csv
 from datetime import datetime
+import json
 
 load_dotenv()
 
@@ -18,6 +18,7 @@ class VAChatbot:
         self.doc_processor = DocumentProcessor()
         self.openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         anthropic.api_key = os.getenv("ANTHROPIC_API_KEY")  # Load Claude API key
+        self.deep_evaluator = DeepEvaluator()
         # Define available models with their tags
         self.available_models = {
             "GPT-4 (Expensive)": {"provider": "openai", "model": "gpt-4", "temperature": 0.7},
@@ -69,73 +70,7 @@ class VAChatbot:
         If you're not sure about something, ask for more details before providing guidance.
         If a question appears to be seeking medical advice, respond with the medical disclaimer and direct them to appropriate VA healthcare resources."""
 
-    def check_moderation(self, text: str) -> tuple[bool, str]:
-        """
-        Check if the text violates OpenAI's content policy
-        Returns: (is_safe, reason)
-        """
-        try:
-            response = self.openai_client.moderations.create(input=text)
-            result = response.results[0]
-            
-            if result.flagged:
-                categories = [cat for cat, flagged in result.categories.items() if flagged]
-                return False, f"Content flagged for: {', '.join(categories)}"
-            return True, ""
-        except Exception as e:
-            return False, f"Error checking moderation: {str(e)}"
-
-    def extract_claude_text(self, content):
-        # If it's a list of blocks/objects, join all text fields or str representations
-        if isinstance(content, list):
-            texts = []
-            for block in content:
-                if isinstance(block, dict) and "text" in block:
-                    texts.append(block["text"])
-                elif hasattr(block, "text"):
-                    texts.append(str(block.text))
-                else:
-                    texts.append(str(block))
-            return "\n".join(texts)
-        # If it's a dict with a 'text' field
-        if isinstance(content, dict) and "text" in content:
-            return content["text"]
-        # If it's a string, just return it
-        if isinstance(content, str):
-            return content
-        # If it's an object (e.g., TextBlock), try to get its 'text' attribute
-        if hasattr(content, "text"):
-            return str(content.text)
-        # Fallback: string representation
-        return str(content)
-
-    def get_responses(self, query: str, chat_history: list, model1: str, model2: str) -> tuple[str, str]:
-        # Check if the query is appropriate
-        is_safe, reason = self.check_moderation(query)
-        if not is_safe:
-            return f"I apologize, but I cannot process that request. {reason} Please keep your questions focused on VA benefits and services.", f"I apologize, but I cannot process that request. {reason} Please keep your questions focused on VA benefits and services."
-
-        # Check for medical advice requests
-        medical_keywords = [
-            "diagnose", "diagnosis", "treatment", "symptom", "condition",
-            "illness", "disease", "medication", "prescription", "doctor",
-            "healthcare", "medical", "therapy", "cure", "heal"
-        ]
-        if any(keyword in query.lower() for keyword in medical_keywords):
-            return """I cannot provide medical advice. For medical questions, please:
-1. Contact your VA healthcare provider
-2. Visit your nearest VA medical center
-3. Use My HealtheVet secure messaging
-4. Call 911 for emergencies
-
-I can help you with VA benefits, services, and administrative questions.""", """I cannot provide medical advice. For medical questions, please:
-1. Contact your VA healthcare provider
-2. Visit your nearest VA medical center
-3. Use My HealtheVet secure messaging
-4. Call 911 for emergencies
-
-I can help you with VA benefits, services, and administrative questions."""
-
+    def get_responses(self, query: str, chat_history: list, model1: str, model2: str) -> tuple[str, str, str]:
         # Get relevant documents
         relevant_docs = self.doc_processor.query_documents(query)
         
@@ -151,12 +86,8 @@ I can help you with VA benefits, services, and administrative questions."""
         ]
         
         # Add chat history
-        for message in chat_history:
-            if message["role"] == "user":
-                # Check user messages in chat history
-                is_safe, _ = self.check_moderation(message["content"])
-                if not is_safe:
-                    continue
+        filtered_history = self.deep_evaluator.process_chat_history(chat_history)
+        for message in filtered_history:
             messages.append(
                 HumanMessage(content=message["content"]) if message["role"] == "user"
                 else AIMessage(content=message["content"])
@@ -179,7 +110,7 @@ I can help you with VA benefits, services, and administrative questions."""
                 temperature=model1_config["temperature"],
                 max_tokens=1000
             )
-            response1 = AIMessage(content=self.extract_claude_text(raw_response1.content))
+            response1 = AIMessage(content=self.deep_evaluator.process_claude_response(raw_response1.content))
 
         # Model 2
         model2_config = self.available_models[model2]
@@ -195,117 +126,19 @@ I can help you with VA benefits, services, and administrative questions."""
                 temperature=model2_config["temperature"],
                 max_tokens=1000
             )
-            response2 = AIMessage(content=self.extract_claude_text(raw_response2.content))
+            response2 = AIMessage(content=self.deep_evaluator.process_claude_response(raw_response2.content))
 
-        # Check if the responses are appropriate
-        is_safe1, reason1 = self.check_moderation(response1.content)
-        is_safe2, reason2 = self.check_moderation(response2.content)
-
-        # --- DeepEval integration ---
-        # Faithfulness metric
-        faith_test_case1 = LLMTestCase(input=query, actual_output=response1.content, retrieval_context=[context])
-        faith_test_case2 = LLMTestCase(input=query, actual_output=response2.content, retrieval_context=[context])
-        faithfulness_metric = FaithfulnessMetric()
-        faith1 = faithfulness_metric.measure(faith_test_case1)
-        faith2 = faithfulness_metric.measure(faith_test_case2)
-
-        # Contextual Precision
-        cprec_test_case1 = LLMTestCase(
-            input=query,
-            actual_output=response1.content,
-            expected_output=response1.content,
-            retrieval_context=[context]
+        # Process responses
+        processed1, processed2 = self.deep_evaluator.process_model_responses(
+            query=query,
+            response1=response1.content,
+            response2=response2.content,
+            context=context,
+            model1=model1,
+            model2=model2,
+            chat_history=filtered_history
         )
-        cprec_test_case2 = LLMTestCase(
-            input=query,
-            actual_output=response2.content,
-            expected_output=response2.content,
-            retrieval_context=[context]
-        )
-        contextual_precision_metric = ContextualPrecisionMetric()
-        cprec1 = contextual_precision_metric.measure(cprec_test_case1)
-        cprec2 = contextual_precision_metric.measure(cprec_test_case2)
-
-        # Contextual Recall
-        crec_test_case1 = LLMTestCase(
-            input=query,
-            actual_output=response1.content,
-            expected_output=response1.content,
-            retrieval_context=[context]
-        )
-        crec_test_case2 = LLMTestCase(
-            input=query,
-            actual_output=response2.content,
-            expected_output=response2.content,
-            retrieval_context=[context]
-        )
-        contextual_recall_metric = ContextualRecallMetric()
-        crec1 = contextual_recall_metric.measure(crec_test_case1)
-        crec2 = contextual_recall_metric.measure(crec_test_case2)
-
-        # Contextual Relevancy
-        crel_test_case1 = LLMTestCase(
-            input=query,
-            actual_output=response1.content,
-            expected_output=response1.content,
-            retrieval_context=[context]
-        )
-        crel_test_case2 = LLMTestCase(
-            input=query,
-            actual_output=response2.content,
-            expected_output=response2.content,
-            retrieval_context=[context]
-        )
-        contextual_relevancy_metric = ContextualRelevancyMetric()
-        crel1 = contextual_relevancy_metric.measure(crel_test_case1)
-        crel2 = contextual_relevancy_metric.measure(crel_test_case2)
-
-        # Answer Relevancy (no retrieval_context/expected_output needed)
-        test_case1 = LLMTestCase(input=query, actual_output=response1.content)
-        test_case2 = LLMTestCase(input=query, actual_output=response2.content)
-        relevancy_metric = AnswerRelevancyMetric()
-        score1 = relevancy_metric.measure(test_case1)
-        score2 = relevancy_metric.measure(test_case2)
-
-        print(f"[DeepEval] Model 1 ({model1}) relevancy: {score1}, faithfulness: {faith1}, contextual precision: {cprec1}, contextual recall: {crec1}, contextual relevancy: {crel1}")
-        print(f"[DeepEval] Model 2 ({model2}) relevancy: {score2}, faithfulness: {faith2}, contextual precision: {cprec2}, contextual recall: {crec2}, contextual relevancy: {crel2}")
-        # --- End DeepEval integration ---
-
-        # --- Logging to CSV ---
-        log_row = {
-            'timestamp': datetime.now().isoformat(),
-            'prompt': query,
-            'model1': model1,
-            'model2': model2,
-            'response1': response1.content,
-            'response2': response2.content,
-            'score1': score1,
-            'score2': score2,
-            'faithfulness1': faith1,
-            'faithfulness2': faith2,
-            'contextual_precision1': cprec1,
-            'contextual_precision2': cprec2,
-            'contextual_recall1': crec1,
-            'contextual_recall2': crec2,
-            'contextual_relevancy1': crel1,
-            'contextual_relevancy2': crel2
-        }
-        log_file = 'chat_eval_log.csv'
-        file_exists = os.path.isfile(log_file)
-        with open(log_file, 'a', newline='', encoding='utf-8') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=log_row.keys())
-            if not file_exists:
-                writer.writeheader()
-            writer.writerow(log_row)
-        # --- End Logging ---
-
-        if not is_safe1:
-            # Show the actual response for debugging
-            return response1.content, response2.content
-        if not is_safe2:
-            return response1.content, response2.content
-        
-        return response1.content, response2.content
+        return processed1, processed2, context
 
 def main():
     st.title("VA.gov Assistant")
@@ -314,6 +147,10 @@ def main():
     # Initialize session state for chat history
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
+        # Load existing chat history if available
+        if os.path.exists('chat_history.json'):
+            with open('chat_history.json', 'r') as f:
+                st.session_state.chat_history = json.load(f)
 
     # Initialize chatbot
     if "chatbot" not in st.session_state:
@@ -340,7 +177,7 @@ def main():
         # Get and display assistant responses
         with st.chat_message("assistant"):
             col1, col2 = st.columns(2)
-            response1, response2 = st.session_state.chatbot.get_responses(query, st.session_state.chat_history, model1, model2)
+            response1, response2, context = st.session_state.chatbot.get_responses(query, st.session_state.chat_history, model1, model2)
             with col1:
                 st.markdown(f"**{model1}**")
                 st.write(response1)
@@ -350,9 +187,13 @@ def main():
 
         # Update chat history
         st.session_state.chat_history.extend([
-            {"role": "user", "content": query},
-            {"role": "assistant", "content": f"Model 1 ({model1}): {response1}\nModel 2 ({model2}): {response2}"}
+            {"role": "user", "content": query, "context": context},
+            {"role": "assistant", "content": f"Model 1 ({model1}): {response1}\nModel 2 ({model2}): {response2}", "context": context}
         ])
+        
+        # Save chat history to file
+        with open('chat_history.json', 'w') as f:
+            json.dump(st.session_state.chat_history, f, indent=2)
 
 if __name__ == "__main__":
     main() 
