@@ -113,6 +113,8 @@ streamlit run chatbot.py
 
 3. Use the dropdowns to select two LLMs (OpenAI and Claude) and ask questions about VA benefits and services.
 
+Note: The chatbot starts with a fresh chat history each time you run it. Chat history is saved to `chat_history.json` during the session for later evaluation.
+
 ## LLM Comparison Dashboard
 
 After running the chatbot and generating chat logs, you can compare and analyze model responses and DeepEval scores using the included dashboard:
@@ -146,7 +148,7 @@ This is required for the LLM Comparison Dashboard and for logging DeepEval score
 
 ## Evaluation
 
-The chatbot automatically saves chat history to `chat_history.json`. To run evaluations on the collected conversations:
+The chatbot saves chat history to `chat_history.json` during your session. To run evaluations on the collected conversations:
 
 ```bash
 python run_evaluation.py

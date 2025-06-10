@@ -147,10 +147,10 @@ def main():
     # Initialize session state for chat history
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
-        # Load existing chat history if available
-        if os.path.exists('chat_history.json'):
-            with open('chat_history.json', 'r') as f:
-                st.session_state.chat_history = json.load(f)
+        # Remove loading of existing chat history
+        # if os.path.exists('chat_history.json'):
+        #     with open('chat_history.json', 'r') as f:
+        #         st.session_state.chat_history = json.load(f)
 
     # Initialize chatbot
     if "chatbot" not in st.session_state:
