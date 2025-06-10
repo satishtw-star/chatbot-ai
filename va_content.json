@@ -1,33 +1,446 @@
 [
   {
-    "url": "https://www.va.gov/sign-in/",
-    "title": "Sign in or create an account | Veterans Affairs",
-    "content": "Sign in or create an account Learn about creating a Login.gov or ID.me account Other sign-in options My HealtheVet sign-in option This option is no longer available DS Logon sign-in option Available through September 30, 2025 You’ll still be able to use your DS Logon account on Defense Department websites after this date. DS Logon Help and support Sign-in errors Verifying your identity Deleting your account Common issues with Login.gov or ID.me Call our MyVA411 main information line for help at 800-698-2411 ( TTY: 711 ). We're here 24/7. Feedback",
-    "type": "sign-in",
+    "url": "https://www.va.gov/resources/va-account-and-profile/",
+    "title": "All Articles In: VA Account And Profile | Veterans Affairs",
+    "content": "All articles in: VA account and profile Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Showing 1 - 10 of 38 articles in \" VA account and profile \" Article type: Question and answer No. Our VA contact center representatives can’t reset your Login.gov or ID.me password for you. This includes representatives at our My HealtheVet help desk. \nYou can get help with resetti... Article type: Question and answer Yes. You can delete your Login.gov or ID.me account on the account provider’s website. Deleting your sign-in account won’t delete any information in your VA records. You just won’... Article type: Question and answer Yes. But you’ll need to use alternate methods to verify your identity and add multifactor authentication (MFA).\nFor Login.gov: You can verify your identity at a participating U.S. post office. ... Article type: Question and answer Yes. Login.gov offers in-person identity verification at a participating United States Postal Service (USPS) location near you.\nYou can choose this option from the start. \nOr, you may also have t... Article type: About You can change your address in your VA.gov profile for certain VA benefits and services. But some departments keep your address in their own separate records, so you’ll need to contact the... Article type: Multiple FAQs Get answers to common questions about third-party connected websites and applications. These apps aren’t created by VA, but you can connect them to your profile and they’ll have access t... Article type: About A partir de 2025, deberá utilizar una cuenta de Login.gov o ID.me para iniciar sesión en todos los sitios web y aplicaciones de VA, incluidos VA.gov, el sitio web My HealtheVet y la aplicaci... Article type: About Starting in 2025, you’ll need to use a Login.gov or ID.me account to sign in to all VA websites and apps—including VA.gov, the My HealtheVet website, and the VA: Health and Benefits mobi... Article type: Multiple FAQs You can sign in to Defense Department (DOD) websites with a DS Logon account. Keep reading on this page to learn more about DS Logon. Article type: Multiple FAQs Learn about getting your VA benefit payments through direct deposit. If you don’t already have a bank account, the Veterans Benefits Banking Program (VBBP) can connect you with a bank... Feedback",
     "links": [
       {
-        "url": "https://www.va.gov/resources/creating-an-account-for-vagov",
-        "text": "Learn about creating a Login.gov or ID.me account"
-      },
-      {
-        "url": "https://www.va.gov/resources/what-to-do-if-you-havent-switched-to-logingov-or-idme-yet",
-        "text": "Learn how to access your benefits and set up your new account"
-      },
-      {
-        "url": "https://www.va.gov/resources/signing-in-to-vagov/",
-        "text": "Sign-in errors"
-      },
-      {
-        "url": "https://www.va.gov/resources/verifying-your-identity-on-vagov/",
-        "text": "Verifying your identity"
+        "url": "https://www.va.gov/resources/can-i-call-va-to-reset-my-logingov-or-idme-password",
+        "text": "Can I call VA to reset my Login.gov or ID.me password?"
       },
       {
         "url": "https://www.va.gov/resources/can-i-delete-my-logingov-or-idme-account",
-        "text": "Deleting your account"
+        "text": "Can I delete my Login.gov or ID.me account?"
       },
       {
-        "url": "https://www.va.gov/resources/support-for-common-logingov-and-idme-issues/",
-        "text": "Common issues with Login.gov or ID.me"
+        "url": "https://www.va.gov/resources/can-i-get-a-logingov-or-idme-account-if-i-dont-have-a-mobile-phone",
+        "text": "Can I get a Login.gov or ID.me account if I don’t have a mobile phone?"
+      },
+      {
+        "url": "https://www.va.gov/resources/can-i-verify-my-identity-in-person-for-my-logingov-account",
+        "text": "Can I verify my identity in person for my Login.gov account?"
+      },
+      {
+        "url": "https://www.va.gov/resources/change-your-address-on-file-with-va",
+        "text": "Change your address on file with VA"
+      },
+      {
+        "url": "https://www.va.gov/resources/connected-apps-faqs",
+        "text": "Connected apps FAQs"
+      },
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov-esp",
+        "text": "Creación de una cuenta para VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov",
+        "text": "Creating an account for VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/resources/ds-logon-faqs",
+        "text": "DS Logon FAQs"
+      },
+      {
+        "url": "https://www.va.gov/resources/direct-deposit-for-your-va-benefit-payments",
+        "text": "Direct deposit for your VA benefit payments"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/can-i-call-va-to-reset-my-logingov-or-idme-password",
+    "title": "Can I Call VA To Reset My Login.gov Or ID.me Password? | Veterans Affairs",
+    "content": "Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Can I call VA to reset my Login.gov or ID.me password? No. Our VA contact center representatives can’t reset your Login.gov or ID.me password for you. This includes representatives at our My HealtheVet help desk. You can get help with resetting your Login.gov or ID.me password directly from the account provider websites. Go to the Login.gov help center Go to the ID.me support section Tags All Veterans Sign in Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. VA benefits Records Apply for a printed Veteran ID card, get your VA benefit letters and medical records, and learn how to apply for a discharge upgrade. Need more help? MyVA411 main information line: 800-698-2411 Last updated: January 17, 2024 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/sign-in",
+        "text": "Sign in"
+      },
+      {
+        "url": "https://www.va.gov/records",
+        "text": "Records"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/can-i-delete-my-logingov-or-idme-account",
+    "title": "Can I Delete My Login.gov Or ID.me Account? | Veterans Affairs",
+    "content": "Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Can I delete my Login.gov or ID.me account? Yes. You can delete your Login.gov or ID.me account on the account provider’s website. Deleting your sign-in account won’t delete any information in your VA records. You just won’t be able to use that account to sign in to VA.gov or any other websites. Learn how to delete your Login.gov account Learn how to delete your ID.me account Tags All Veterans Sign in Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. Related information VA benefits Health care Apply for VA health care, find out how to access services, and manage your health and benefits online. Need more help? MyVA411 main information line: 800-698-2411 Last updated: January 17, 2025 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/sign-in",
+        "text": "Sign in"
+      },
+      {
+        "url": "https://www.va.gov/resources/signing-in-to-vagov",
+        "text": "Signing in to VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov",
+        "text": "Creating an account for VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/health-care",
+        "text": "Health care"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/can-i-get-a-logingov-or-idme-account-if-i-dont-have-a-mobile-phone",
+    "title": "Can I Get A Login.gov Or ID.me Account If I Don’t Have A Mobile Phone? | Veterans Affairs",
+    "content": "Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Can I get a Login.gov or ID.me account if I don’t have a mobile phone? Yes. But you’ll need to use alternate methods to verify your identity and add multifactor authentication (MFA). For Login.gov: You can verify your identity at a participating U.S. post office. If you don’t have a U.S. phone number at all, you may be able to verify your address by mail. Learn about verifying in person (Login.gov website) Learn about verifying by mail (Login.gov website) For ID.me: You can verify your identity on a video call. You’ll need a computer with a webcam and internet connection. And you’ll need to upload photos of your ID from the computer. Or you can book an appointment to verify your identity in person at a participating location of The UPS Store. Learn about verifying on a video call (ID.me website) Learn about in-person verification appointments (ID.me website) For both accounts: You can choose an MFA method that doesn’t require a mobile phone, like a security key, landline, or backup codes. Review MFA methods (Login.gov website) Review MFA methods (ID.me website) Tags All Veterans Sign in Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. Related information VA benefits Records Apply for a printed Veteran ID card, get your VA benefit letters and medical records, and learn how to apply for a discharge upgrade. Need more help? MyVA411 main information line: 800-698-2411 Last updated: June 4, 2025 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/resources/how-to-create-an-idme-account-for-va",
+        "text": "Learn how to create an ID.me account"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-create-a-logingov-account-for-va",
+        "text": "Learn how to create a Login.gov account"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/sign-in",
+        "text": "Sign in"
+      },
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov",
+        "text": "Creating an account for VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/resources/verifying-your-identity-on-vagov",
+        "text": "Verifying your identity on VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/records",
+        "text": "Records"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/can-i-verify-my-identity-in-person-for-my-logingov-account",
+    "title": "Can I Verify My Identity In Person For My Login.gov Account? | Veterans Affairs",
+    "content": "Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Can I verify my identity in person for my Login.gov account? Yes. Login.gov offers in-person identity verification at a participating United States Postal Service (USPS) location near you. You can choose this option from the start. Or, you may also have the option to verify your identity in person if you tried to verify online but couldn’t upload a photo of your ID. Learn more about verifying your identity in person on the Login.gov website Tags All Veterans Sign in Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. VA benefits Records Apply for a printed Veteran ID card, get your VA benefit letters and medical records, and learn how to apply for a discharge upgrade. Need more help? MyVA411 main information line: 800-698-2411 Last updated: August 9, 2024 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/sign-in",
+        "text": "Sign in"
+      },
+      {
+        "url": "https://www.va.gov/records",
+        "text": "Records"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/change-your-address-on-file-with-va",
+    "title": "Change Your Address On File With VA | Veterans Affairs",
+    "content": "Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Change your address on file with VA You can change your address in your VA.gov profile for certain VA benefits and services. But some departments keep your address in their own separate records, so you’ll need to contact them directly. Read on to learn about how to change your address on file with VA. Change your address online in your VA.gov profile When you change your address and other contact information online in your VA.gov profile, it updates across these VA benefits and services: VA health care (including prescriptions, appointment reminders, lab and test results, and communications from your VA medical center) Disability compensation Pension benefits Claims and appeals Veteran Readiness and Employment (VR&E) Find out how to change your address in your VA.gov profile Change your address by contacting the department directly Some of our departments keep your contact information in their own separate records. If you use any of the VA benefits or services listed here, you’ll need to contact the department that handles those benefits directly to change your information. Education benefits Call us at 888-442-4551 ( TTY: 711 ). We’re here Monday through Friday, 8:00 a.m. to 7:00 p.m. ET. Find out how to update your contact information for verifying enrollment Home loan benefits Call us at 877-827-3702 . We’re here Monday through Friday, 8:00 a.m. to 6:00 p.m. ET. We can connect you to the nearest VA regional office with loan guaranty staff to update your information. CHAMPVA Call our customer call center at 800-733-8387 . We’re here Monday through Friday, 8:05 a.m. to 7:30 p.m. ET. Please have your last address available. Our customer service representatives will need to verify this before updating your file. Or send a signed and dated address change request to us at: CHAMPVA PO Box 500 Spring City, PA 19475 The Foreign Medical Program Call our Foreign Medical Program office at 877-345-8179 . We’re here Monday through Friday, 8:05 a.m. to 6:45 p.m. ET Or send a signed and dated address change request to us at: VHA Office of Community Care Foreign Medical Program (FMP) PO Box 469061 Denver, CO 80246-9061 Life insurance benefits Servicemembers’ Group Life Insurance (SGLI) or Family SGLI (FSGLI) You can update your information online through milConnect. Go to milConnect to update your SGLI or FSGLI information Veterans’ Group Life Insurance (VGLI) You can update your information online through the Prudential website or by sending a letter to Prudential. Go to the Prudential website to update your VGLI information Or send a signed and dated address change request to Prudential at: OSGLI PO Box 41618 Philadelphia, PA 19176-9913 Servicemembers’ Group Life Insurance Traumatic Injury Protection (TSGLI) You can find the contact information for your uniformed service on the first page of the Application for TSGLI Benefits (SGLV 8600). Get SGLV 8600 to download Other VA life insurance programs If you have life insurance through any of these VA programs, you can call us or send us a letter to update your information: Veterans Affairs Life Insurance (VALife) Veterans’ Mortgage Life Insurance (VMLI) Service-Disabled Veterans Life Insurance (S-DVI) United States Government Life Insurance (USGLI) National Service Life Insurance (NSLI) Veterans’ Special Life Insurance (VSLI) Veterans’ Reopened Insurance Call our VA Insurance Center (VAIC) at 800-669-8477 . Call for current hours. Or send a signed and dated address change request to us at: Department of Veterans Affairs Regional Office and Insurance Center PO Box 7208 Philadelphia, PA 19101 Tags All Veterans Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. Related information VA benefits Health care Apply for VA health care, find out how to access services, and manage your health and benefits online. Need more help? MyVA411 main information line: 800-698-2411 Last updated: May 21, 2025 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/",
+        "text": "Sign in to manage your VA.gov profile"
+      },
+      {
+        "url": "https://www.va.gov/change-address",
+        "text": "Find out how to change your address in your VA.gov profile"
+      },
+      {
+        "url": "https://www.va.gov/resources/gi-bill-enrollment-verification-faqs",
+        "text": "Find out how to update your contact information for verifying enrollment"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-change-your-address-in-your-vagov-profile",
+        "text": "How to change your address in your VA.gov profile"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-change-your-legal-name-on-file-with-va",
+        "text": "How to change your legal name on file with VA"
+      },
+      {
+        "url": "https://www.va.gov/resources/signing-in-to-vagov",
+        "text": "Signing in to VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/health-care",
+        "text": "Health care"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/connected-apps-faqs",
+    "title": "Connected Apps FAQs | Veterans Affairs",
+    "content": "Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Connected apps FAQs Get answers to common questions about third-party connected websites and applications. These apps aren’t created by VA, but you can connect them to your profile and they’ll have access to your personal VA data, like your health or service records. Using connected apps Connected apps are third-party (non-VA) applications or websites that can share certain information from your VA.gov profile. They can only access this information after you give us your permission to share it. When you connect to an app, you can use the app's services without having to manually enter your shared information. For example, you can link information from your VA health records to an app that helps you track your health. We offer this feature for your convenience. It’s always your choice whether to connect, or stay connected, to a third-party app. We designed and manage My HealtheVet and VA Mobile apps specifically for the Veterans, service members, and caregivers we serve. Manage your health care with My HealtheVet Find VA Mobile apps Connected apps are designed by organizations outside of VA. These apps can receive only certain personal information, like your VA health or service records, that you tell us to share with them. You can find third-party apps for Veterans in our app directory. Check back often to connect to new apps. Find apps you can use Take these steps to connect the app: When the app (or website) prompts you to connect your VA data, sign in with a verified account through one of our account providers. If you don’t already have a verified account, you can create a free Login.gov or ID.me account now. Learn about creating an account for VA.gov Review the information the app is asking to access. If you’re comfortable sharing that information, allow access. If you have trouble connecting the app, contact the app’s support for help. Find apps you can use Yes. If you no longer want to share your information with an app, you can disconnect it from your VA.gov profile at any time. The app will then no longer have access to new profile information. To disconnect from an app: 1. Sign in to VA.gov 2. Select your name, then Profile . 3. Within your profile, select Connected apps . 4. Find the site or app, and select Disconnect . Note: Some apps may still store information you’ve already shared. If you’d like to ask the app to delete any stored information, contact the app’s support. If you’re concerned that the app may have misused your information, email us at api@va.gov . This depends on the third-party app you want to use. Connected apps are available for all modern device types, like desktop computers, tablets, iPhones, and Android phones. Some of these third-party apps work only with certain devices or operating systems. But more options will become available as more developers design apps for Veterans. Privacy and security with connected apps No. You don't need to connect your VA.gov profile to any third-party apps. We offer this option for your convenience only. In some cases, you can manually enter your information instead. A connected app can only access the information and permissions you see listed when you authorize the connection. This list will vary for each app. It depends on the app’s policy. Once you’ve disconnected an app, they'll no longer receive new information about you from VA. However, you may still need to request that they permanently delete data they’ve already collected. Refer to your app’s privacy policy or contact their customer support if you have specific questions. Take these 3 steps to protect your information: Disconnect from the app. Contact the app’s support and ask them to permanently delete any stored information they may still have from you. Email us at api@va.gov to report the app. Support with connected apps If you’re having trouble connecting to an app, contact the app’s customer support for help. This depends on the problem: If your health records are missing: It can take up to 36 hours for new health records to appear. This gives your health care provider time to discuss results with you before making them available online. If it’s been more than 3 days since your last appointment, or if you need your information sooner, contact your VA health care team. If your information isn’t accurate: Call our MyVA411 main information line at 800-698-2411 ( TTY: 711 ). Or visit a VA health facility near you and ask a staff member for help. Find a VA location near you If you’re getting an “unreadable data” message: This means the connected app has access to your information, but doesn’t use it in its interface. It’s nothing to worry about. If you have questions about this, send feedback directly to the app. Get answers to frequently asked questions about signing in Tags All Veterans Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. Related information VA benefits Health care Apply for VA health care, find out how to access services, and manage your health and benefits online. Need more help? MyVA411 main information line: 800-698-2411 Last updated: May 7, 2021 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/resources/find-apps-you-can-use",
+        "text": "Find apps you can use"
+      },
+      {
+        "url": "https://www.va.gov/health-care/manage-health",
+        "text": "Manage your health care with My HealtheVet"
+      },
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov",
+        "text": "Learn about creating an account for VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/",
+        "text": "Sign in to VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/find-locations",
+        "text": "Find a VA location near you"
+      },
+      {
+        "url": "https://www.va.gov/resources/signing-in-to-vagov",
+        "text": "Get answers to frequently asked questions about signing in"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/verifying-your-identity-on-vagov",
+        "text": "Verifying your identity on VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/resources/privacy-and-security-on-vagov",
+        "text": "Privacy and security on VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/health-care",
+        "text": "Health care"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/creating-an-account-for-vagov-esp",
+    "title": "Creación De Una Cuenta Para VA.gov | Veterans Affairs",
+    "content": "English | Español Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Creación de una cuenta para VA.gov A partir de 2025, deberá utilizar una cuenta de Login.gov o ID.me para iniciar sesión en todos los sitios web y aplicaciones de VA, incluidos VA.gov, el sitio web My HealtheVet y la aplicación móvil de VA: Health and Benefits (VA: Salud y Beneficios). Siga leyendo para obtener más información sobre cómo crear una cuenta gratuita de Login.gov o ID.me para administrar en línea sus beneficios, servicios e información de VA. Instrucciones paso a paso Le guiaremos en cada etapa del proceso para crear su cuenta de Login.gov o ID.me para VA. Cómo crear una cuenta de Login.gov para VA (en inglés) Cómo crear una cuenta de ID.me para VA (en inglés) Si desea obtener más información sobre cómo elegir entre una cuenta de Login.gov o ID.me , o si tiene preguntas sobre la creación de su cuenta o cómo prepararse para los cambios de inicio de sesión de su cuenta de VA a partir de 2025, siga leyendo. Cómo elegir su cuenta ¿Por qué debería crear una cuenta para iniciar sesión en VA.gov? Cuando crea una cuenta de Login.gov o ID.me , puede acceder en línea a sus beneficios, cuidado de la salud e información de VA, y administrarlos. Puede utilizar su cuenta para iniciar una sesión en VA.gov, en aplicaciones móviles de VA y en todo otro servicio en línea de VA. Estas son algunas cosas que puede hacer con una cuenta: Solicitar beneficios Verificar el estado de su reclamación Actualizar su dirección y demás información de contacto en varios beneficios y servicios de VA Verificar el estado de sobrepagos por beneficios o facturas de copagos que pueda tener y solicitar ayuda con estos También puede hacer estas cosas para velar por su salud: Renovar sus recetas Comunicarse de manera privada y segura con su equipo de cuidado de la salud Solicitar o programar algunas citas de salud Revisar los resultados de exámenes y de pruebas de laboratorio También puede usar su cuenta para iniciar sesiones en otros sitios web gubernamentales para administrar sus beneficios, como los beneficios del seguro social. ¿Qué tipo de cuenta debería crear para administrar mis beneficios de VA en línea? Puede crear una cuenta de Login.gov o ID.me . Lo que debe saber: Login.gov es el proveedor de cuenta única de nuestro gobierno para VA y otros beneficios y servicios que ofrece el gobierno. La Administración General de Servicios de los EE. UU. crea y mantiene su cuenta. Para informarse sobre la manera en que nuestro gobierno protege su información, lea la política de privacidad. Lea la política de privacidad en el sitio web de Login.gov ID.me es un proveedor de cuentas no gubernamental que tiene contratos con organizaciones gubernamentales y no gubernamentales. ID.me crea y mantiene su cuenta. Para informarse sobre la manera en que ID.me protege su información, lea la política de privacidad. Lea la política de privacidad en el sitio web de ID.me (en inglés) Tanto Login.gov como ID.me cumplen las normas de seguridad modernas. Ambas cuentas protegen sus datos para que solo usted pueda acceder y cambiar su información almacenada. Tanto Login.gov como ID.me le permiten usar una cuenta única y segura para acceder a sus beneficios y servicios de VA. Puede utilizar cualquiera de las cuentas para administrar otros beneficios y servicios gubernamentales (como los beneficios del seguro social). Creación de su cuenta ¿Cómo creo una cuenta de Login.gov? Puede crear su cuenta en el sitio web de Login.gov . Esto es lo que necesitará: Una dirección de correo electrónico Una contraseña única que incluya al menos 12 caracteres Aprenda a crear una cuenta de Login.gov para VA (en inglés) Cuando configure su cuenta, deberá configurar la autenticación multifactor. Obtenga más información sobre la autenticación multifactor Obtenga información sobre los métodos de autenticación multifactor en el sitio web de Login.gov La primera vez que utilice su cuenta para administrar sus beneficios o información de VA, deberá verificar su identidad. Esto es lo que necesitará: Su licencia de conducir u otra identificación expedida por el estado y Su número de seguro social y Un número de teléfono de los EE. UU. Nota: Si no tiene un número de teléfono de los EE. UU., Login.gov podrá enviarle una carta a su dirección postal. Obtenga más información sobre cómo verificar su identidad en el sitio web de Login.gov ¿Qué significa verificar mi identidad y por qué tengo que hacerlo? La verificación de su identidad es un proceso único que le pedimos que complete para su cuenta de Login.gov o ID.me . El proceso suele tomar unos 10 minutos. Durante este proceso, el proveedor de la cuenta ( Login.gov o ID.me ) le pedirá que proporcione cierta información personal y su identificación (ID, por sus siglas en inglés). Este proceso nos ayuda a garantizar que la persona que crea su cuenta sea realmente usted y no alguien que finja ser usted. Es muy parecido al proceso de la apertura de una cuenta bancaria. La verificación de su identidad no tiene nada que ver con que confiemos o no en que usted es quien dice ser. Se trata de protegerlo de los estafadores que puedan intentar configurar una cuenta a su nombre para acceder a su información y beneficios. Después de verificar su identidad, no tendrá que volver a hacerlo para esa cuenta a menos que pierda el acceso al método de autenticación multifactor de su cuenta o necesite volver a crearla. En el futuro, es posible que le pidamos que nos ayude a volver a verificar su identidad una vez cada varios años para su mayor protección. ¿Cómo creo una cuenta de ID.me? Puede crear su cuenta en el sitio web de ID.me . Esto es lo que necesitará: Una dirección de correo electrónico Una contraseña única que incluya al menos 8 caracteres (y al menos 1 letra mayúscula, 1 letra minúscula y 1 número) Cuando cree su cuenta, deberá configurar la autenticación multifactor. Obtenga más información sobre la autenticación multifactor Obtenga información sobre los métodos de autenticación multifactor en el sitio web de ID.me La primera vez que utilice su cuenta para administrar sus beneficios o información de VA, deberá verificar su identidad. Esto es lo que necesitará: Un número de teléfono y Su licencia de conducir, una identificación expedida por el estado o tarjeta de pasaporte Obtenga más información sobre cómo verificar su identidad para VA en el sitio web de ID.me ¿Qué pasa si no estoy seguro de tener una cuenta de Login.gov o ID.me? Muchas personas crean cuentas que con el tiempo olvidan que tienen. La mejor manera de saber si ya tiene una cuenta de Login.gov o ID.me es intentar crear una nueva. Para crear una cuenta nueva, vaya a nuestra página de inicio de sesión de VA.gov. Luego seleccione Crear una cuenta con Login.gov o Crear una cuenta con ID.me . Si intenta crear una cuenta y ya tiene una, el proveedor del servicio de inicio de sesión se lo informará. Luego podrá intentar restablecer su correo electrónico. Vaya a nuestra página de inicio de sesión de VA.gov (en inglés) ¿Puedo obtener una cuenta de Login.gov o ID.me si no tengo un teléfono móvil? Sí. Solo necesitará métodos alternativos para verificar su identidad y añadir la autenticación multifactor (MFA, por sus siglas en inglés). Para Login.gov: Puede verificar su identidad en una oficina de correos de los EE. UU. participante. También puede verificar en línea y cargar imágenes de su identificación desde una computadora. Si no tiene un número de teléfono de los EE. UU., es posible que pueda verificar su dirección por correo. Más información sobre la verificación en persona en el sitio web de Login.gov Más información sobre la verificación por correo en el sitio web de Login.gov Para ID.me: Puede verificar su identidad para su cuenta a través de una videollamada con un agente autorizado de ID.me. Deberá cargar fotos de sus documentos de identificación desde una computadora y necesitará una cámara web para la videollamada. Obtenga más información sobre cómo verificar su identidad en una videollamada en el sitio web de ID.me Para ambas cuentas: Puede elegir un método de MFA que no requiera un teléfono móvil. Puede utilizar una clave de seguridad, una llamada a un teléfono fijo o códigos de respaldo. Revise los métodos de MFA en el sitio web de Login.gov Revise los métodos de MFA en el sitio web de ID.me ¿Cómo puedo obtener más ayuda de Login.gov o de ID.me? Visite el sitio web del proveedor de la cuenta. Visite el centro de ayuda de Login.gov Visite la sección de apoyo de ID.me ¿En qué se diferencia la autenticación multifactor de la verificación de la identidad? La verificación de la identidad y la autenticación multifactor se complementan para proteger su identidad e información personal: La verificación de su identidad es un proceso único que usted lleva a cabo cuando configura por primera vez su cuenta de inicio de sesión. Para verificar su identidad, usted proporciona cierta información personal y su identificación (ID). La verificación de su identidad nos ayuda a garantizar que solo usted puede crear su cuenta de inicio de sesión y que ningún estafador cree una a su nombre. La autenticación multifactor (MFA, por sus siglas en inglés) es una capa adicional de protección que forma parte del proceso de inicio de sesión para utilizar su cuenta. Cuando configura su cuenta por primera vez, usted establece su elección del método de MFA (como una aplicación de autenticación) en un dispositivo al que solo usted tenga acceso. Luego, utiliza ese método para proporcionar un código específico que le enviamos cada vez que inicia una sesión. La autenticación multifactor nos ayuda a garantizar que solo usted pueda usar su cuenta de inicio de sesión para acceder y administrar sus beneficios y cuidado de la salud. Preparación para los cambios en el inicio de sesiones de VA ¿Qué cambiará en 2025 en las cuentas de inicio de sesiones de VA? En 2025, cambiaremos a un proceso de inicio de sesiones que brinde una experiencia más simple y moderna, con 2 opciones seguras ( Login.gov y ID.me ) para la cuenta de inicio de sesiones. Esto es lo que cambiará para los veteranos y beneficiarios como usted: Después del 4 de marzo de 2025 , no podrá iniciar ninguna sesión en VA.gov, en las aplicaciones móviles de VA ni en otros servicios en línea de VA utilizando una identificación de usuario y una contraseña de My HealtheVet . Después del 30 de septiembre de 2025 , no podrá iniciar ninguna sesión con un nombre de usuario y contraseña de inicio de sesión de DS Logon . Tendrá 2 opciones de cuenta de inicio de sesión que cumplen las normas de seguridad modernas: una cuenta de Login.gov o una cuenta de ID.me . Podrá utilizar su cuenta para iniciar una sesión en todos los sitios web de VA y aplicaciones para administrar los beneficios y cuidados que le ofrece VA. Deberá utilizar una dirección de correo electrónico única y configurar la autenticación multifactor (MFA, por sus siglas en inglés) para su cuenta. No se preocupe. Su portal de salud My HealtheVet no desaparecerá. Simplemente necesitará iniciar sesión con una cuenta de Login.gov o ID.me . ¿Podré seguir administrando mi cuidado de salud a través de My HealtheVet? Sí. Su portal de salud My HealtheVet no desaparecerá. Aún podrá seguir administrando su cuidado de salud a través de My HealtheVet. Pero deberá utilizar una cuenta de Login.gov o ID.me para iniciar sesión y administrar su atención médica. Al crear su cuenta, necesitará verificar su identidad y agregar la autenticación multifactor (MFA, por sus siglas en inglés) como una capa adicional de protección. Hacemos este cambio para seguir protegiendo toda la información y los beneficios de los veteranos. Es posible que también tenga preguntas sobre nuestro iniciativa para crear una nueva plataforma para My HealtheVet en los próximos 2 años. La nueva página de inicio de My HealtheVet en VA.gov proporcionará un sitio único donde podrá administrar sus necesidades de cuidado de la salud, al mismo tiempo que administra sus otros beneficios y servicios de VA. Continuará teniendo acceso a todas las herramientas de salud en las que confía. Más información sobre la nueva página de inicio de My HealtheVet's en VA.gov (en inglés) ¿Por qué VA permitirá mediante este cambio solo 2 opciones para la cuenta de inicio de sesión? Permitimos solo 2 opciones de cuenta seguras y modernas para iniciar una sesión ( Login.gov o ID.me) por estas razones: Los veteranos nos han dicho muchas veces en el transcurso de varios años que quieren menos opciones de cuentas y que quieren poder utilizar la cuenta de inicio de sesión que elijan para acceder a todos los beneficios y al cuidado de la salud de VA. El robo de la identidad y el robo de la identidad relacionado con el ámbito médico son problemas graves que pueden causar grandes dificultades financieras e interrupciones en el cuidado de la salud de los veteranos y sus familias. En 2023, la Comisión Federal de Comercio (FTC, por sus siglas en inglés) recibió más de un millón de denuncias de robo de identidad. Ese mismo año, los veteranos y militares retirados también dieron parte a la FTC de 350 millones de dólares en pérdidas por fraude. La política federal nos exige que ayudemos a todos los veteranos a comenzar a utilizar una cuenta de inicio de sesión que cumpla las normas de seguridad modernas. También debemos simplificar la experiencia de inicio de sesión para los veteranos. Login.gov y ID.me nos ayudan a reunir ambos requisitos. ¿Qué pasa si no obtengo a tiempo una cuenta de Login.gov o ID.me? No se preocupe. No perderá ninguna información almacenada y siempre podrá administrar sus beneficios y su cuidado de la salud de VA por teléfono, por correo o en persona. Pero deberá crear su cuenta de Login.gov o ID.me para acceder a su información y administrar en línea nuevamente sus beneficios y cuidado de la salud. ¿Qué pasa si no deseo obtener una cuenta de Login.gov o ID.me? Usted siempre será quien decida si desea obtener una cuenta. Su elección no afectará de ninguna manera su elegibilidad para recibir beneficios o cuidado de la salud de VA. Si no obtiene una cuenta de Login.gov o ID.me antes de que eliminemos las opciones de inicio de sesión de My HealtheVet y DS Logon , no podrá acceder a su información de VA ni administrar en línea sus beneficios y cuidado de la salud. Pero siempre podrá administrar sus beneficios y su cuidado de la salud de VA por teléfono, por correo o en persona. Repase nuestra lista de números de teléfono útiles de VA para encontrar el que se adapte a sus necesidades específicas. Obtenga una lista de números de teléfono útiles de VA (en inglés) O busque el número de teléfono y la dirección de su centro de salud, oficina regional, cementerio u otra instalación local de VA. Encuentre un centro de VA cerca de usted (en inglés) ¿Tendré que incorporar la autenticación multifactor debido a este cambio? Sí. Tanto Login.gov como ID.me requieren que se implemente la autenticación multifactor (MFA, por sus siglas en inglés) como parte del proceso de configuración de una cuenta. Esta capa adicional de protección nos ayuda a garantizar que es usted quien intenta utilizar su cuenta de inicio de sesión y no alguien que se hace pasar por usted. La autenticación multifactor es una práctica común en muchos sitios web y aplicaciones. Es posible que ya la utilice para acceder a su correo electrónico, cuenta bancaria o cuentas de redes sociales. Cuando configure su cuenta de Login.gov o ID.me , podrá elegir la opción de autenticación multifactor que mejor se amolde a sus necesidades. Visite la guía de opciones para la autenticación multifactor de Login.gov Visite la guía de opciones para la autenticación multifactor de ID.me Tags All Veterans Sign in Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. Related information VA benefits Records Apply for a printed Veteran ID card, get your VA benefit letters and medical records, and learn how to apply for a discharge upgrade. Need more help? MyVA411 main information line: 800-698-2411 Last updated: January 31, 2025 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov/",
+        "text": "English"
+      },
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov-esp/",
+        "text": "Español"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-create-a-logingov-account-for-va",
+        "text": "Cómo crear una cuenta de Login.gov para VA (en inglés)"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-create-an-idme-account-for-va",
+        "text": "Cómo crear una cuenta de ID.me para VA (en inglés)"
+      },
+      {
+        "url": "https://www.va.gov/resources/verifying-your-identity-on-vagov-esp",
+        "text": "Obtenga más información sobre la autenticación multifactor"
+      },
+      {
+        "url": "https://www.va.gov/sign-in/",
+        "text": "Vaya a nuestra página de inicio de sesión de VA.gov (en inglés)"
+      },
+      {
+        "url": "https://www.va.gov/resources/my-healthevet-on-vagov-what-to-know",
+        "text": "Más información sobre la nueva página de inicio de My HealtheVet's en VA.gov (en inglés)"
+      },
+      {
+        "url": "https://www.va.gov/resources/helpful-va-phone-numbers",
+        "text": "Obtenga una lista de números de teléfono útiles de VA (en inglés)"
+      },
+      {
+        "url": "https://www.va.gov/find-locations",
+        "text": "Encuentre un centro de VA cerca de usted (en inglés)"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/sign-in",
+        "text": "Sign in"
+      },
+      {
+        "url": "https://www.va.gov/resources/signing-in-to-vagov-esp",
+        "text": "Iniciar sesión en VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/records",
+        "text": "Records"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/creating-an-account-for-vagov",
+    "title": "Creating An Account For VA.gov | Veterans Affairs",
+    "content": "English | Español Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Creating an account for VA.gov Starting in 2025, you’ll need to use a Login.gov or ID.me account to sign in to all VA websites and apps—including VA.gov, the My HealtheVet website, and the VA: Health and Benefits mobile app. Keep reading to learn about creating a free Login.gov or ID.me account to manage your VA benefits, services, and information online. Get step-by-step instructions We’ll guide you through each step of creating your Login.gov or ID.me account for VA online. For a Login.gov account Get step-by-step instructions to create a Login.gov account for VA Play a video on how to create a Login.gov account for VA (YouTube) For an ID.me account Get step-by-step instructions to create an ID.me account for VA Play a video on how to create an ID.me account for VA (YouTube) If you want to learn more about choosing between a Login.gov or ID.me account, or if you have questions about creating your account or preparing for VA’s sign-in changes in 2025, keep reading. Choosing your account When you create a Login.gov or ID.me account, you can access and manage your VA benefits, health care, and information online. You can use your account to sign in to VA.gov, VA mobile apps, and any other VA online service. Here are some things you can do with an account: Apply for benefits Check your claim status Update your address and other contact information across several VA benefits and services Check the status of and request help with any benefit overpayments or copay bills you may have You can also do these things to manage your health: Refill prescriptions Communicate privately and securely with your health care team Request or schedule some health appointments Review lab and test results You can also use your account to sign in to some other government websites to manage benefits like Social Security benefits. Here’s what to know: Login.gov is our government’s one account provider. The U.S. government creates and maintains your account. Read Login.gov's privacy policy on their website ID.me is a non-government account provider that contracts with government and non-government organizations. ID.me creates and maintains your account. Read ID.me's privacy policy on their website Both accounts meet the latest federal security standards. And both accounts offer you access to manage your VA benefits and care—and other government benefits—online. If any of these descriptions are true for you, you’ll need to choose ID.me : You live outside the U.S. You don’t have a Social Security number You don’t have a current driver’s license or other state-issued ID Your phone is on a plan that’s not in your name and you want to verify your identity online You have a non-driver’s-license state ID from Alaska, Delaware, Nevada, or Wisconsin Note: If the address listed on your ID is a PO Box, we recommend choosing ID.me . Many people create accounts that they forget they have over time. The best way to find out if you already have a Login.gov or ID.me account is to try to create a new one. To create a new account, go to our VA.gov sign-in page. Then select Create an account with Login.gov or Create an account with ID.me . If you try to create an account and you already have one, the sign-in service provider will tell you. You can then try to reset your email. Go to our VA.gov sign-in page Creating your account You can create your account for VA online. Here’s what you’ll need: A unique personal email address  that only you use A unique password that includes at least 12 characters A way to add an extra layer of protection to your account (called multifactor authentication or MFA), like an authenticator app or mobile phone to get text message codes Get step-by-step instructions to create a Login.gov account for VA Learn about MFA methods on the Login.gov website The first time you use your account to manage your VA benefits or information, you’ll need to verify your identity. This one-time process helps us protect all Veterans’ identities and prevent scammers from stealing your VA benefits. You must have a valid, unexpired driver’s license or state ID. You may be able to verify online or at a participating U.S. post office. Get step-by-step instructions to verify your identity for your Login.gov account Learn more about verifying your identity for VA Identity verification is a one-time process that we ask you to complete for your Login.gov or ID.me account. The process often takes about 10 minutes. During this process, the account provider ( Login.gov or ID.me ) will ask you to provide certain personal information and identification (ID). This process helps us make sure that the person creating your account is really you—and not someone pretending to be you. It’s a lot like the process for setting up a bank account. Identity verification is not about whether we trust that you’re who you say you are. It’s about protecting you from scammers who may try to set up an account in your name to access your information and benefits. After you verify your identity, you won’t have to do it again for that account unless you lose access to your account’s multifactor authentication method or need to recreate your account. In the future, we may ask you to help us reverify your identity once every several years for added protection. Here’s what you’ll need to get started: An email address A unique password that includes at least 8 characters (with at least 1 uppercase letter, 1 lowercase letter, and 1 number) A way to add an extra layer of protection to your account (called multifactor authentication or MFA), like an authenticator app or mobile phone to get text message codes Get step-by-step instructions to create your ID.me account Learn about MFA methods on the ID.me website The first time you use your account to manage your VA benefits or information, you’ll need to verify your identity. This one-time process helps us protect all Veterans’ information and prevent scammers from stealing your VA benefits. You’ll need a U.S. driver’s license, state-issued ID, passport, passport card, or other accepted ID documents. You may be able to verify online or in person at a participating location of The UPS Store. Get step-by-step instructions to verify your identity with ID.me Learn more about verifying your identity for VA Yes. But you’ll need to use alternate methods to verify your identity and add multifactor authentication (MFA). For Login.gov: You can verify your identity at a participating U.S. post office. If you don’t have a U.S. phone number at all, you may be able to verify your address by mail. Learn about verifying in person (Login.gov website) Learn about verifying by mail (Login.gov website) For ID.me: You can verify your identity on a video call. You’ll need a computer with a webcam and internet connection. And you’ll need to upload photos of your ID from the computer. Or you can book an appointment to verify your identity in person at a participating location of The UPS Store. Learn about verifying on a video call (ID.me website) Learn about in-person verification appointments (ID.me website) For both accounts: You can choose an MFA method that doesn’t require a mobile phone, like a security key, landline, or backup codes. Review MFA methods (Login.gov website) Review MFA methods (ID.me website) We can help guide you to fix some common issues as you create your account and verify your identity. Get support for common Login.gov and ID.me issues Or you can get more help on each account provider’s website. Go to the Login.gov help center Go to the ID.me support section Identity verification and multifactor authentication work together to protect your identity and personal information: Identity verification is a one-time process. You complete this process when you first set up your sign-in account. To verify your identity, you provide certain personal information and identification (ID). Identity verification helps us make sure only you can create your sign-in account—and no scammer can create one in your name. Multifactor authentication (MFA) is an extra layer of protection that’s part of the process of signing in to use your account. When you first set up your account, you set up your choice of MFA method (like an authenticator app) on a device only you have access to. Then, you use that method to provide a specific code we send you each time you sign in. Multifactor authentication helps us make sure only you can use your sign-in account to access and manage your benefits and health care. Preparing for VA sign-in changes We’re moving to a simpler, more modern, sign-in experience in 2025, with 2 secure sign-in account options ( Login.gov and ID.me ). Here’s what will change for Veterans and beneficiaries like you: As of March 5, 2025 , you can no longer sign in to VA.gov, VA mobile apps, or other VA online services with a My HealtheVet user ID and password. After September 30, 2025 , you won’t be able to sign in with a DS Logon username and password. You’ll have 2 sign-in account options that meet modern security standards: a Login.gov or ID.me account. You’ll be able to use your account to sign in to all VA websites and apps to manage your VA benefits and care. You’ll need to use a unique email address and set up multifactor authentication (MFA) for your account. Don’t worry. Your My HealtheVet health portal isn’t going away. You’ll just need to sign in to it with a Login.gov or ID.me account. Here’s why we’ll allow only 2 modern, secure sign-in account options ( Login.gov or ID.me ): Veterans have told us many times over several years that they want fewer account options. And they want to be able to use their chosen sign-in account to access all of their VA benefits and care. Identity theft and related medical identity theft are serious issues that can cause severe financial hardship and disruption in medical care for Veterans and their families. In 2023, the Federal Trade Commission (FTC) received more than 1 million reports of identity theft. That same year, Veterans and military retirees also reported to the FTC $350 million in losses to fraud. We’re required by federal policy to help all Veterans begin using a sign-in account that meets modern security standards. We’re also required to simplify the sign-in experience for Veterans. Login.gov and ID.me help us meet both these requirements. Yes. Your My HealtheVet health portal isn’t going away. You’ll still be able to manage your health care through My HealtheVet . But you’ll need to use either a Login.gov or an ID.me account to sign in to do that. When you create your account, you’ll need to verify your identity and add multifactor authentication (MFA) as an added layer of protection. We’re making this change to continue to protect all Veterans’ information and benefits. You may also have questions about our effort to build a new home for My HealtheVet over the next 2 years. My HealtheVet ’s new home on VA.gov will give you a single place to manage your health care needs in the same location where you manage your other VA benefits and services. You’ll continue to have access to all your trusted health tools. Learn more about My HealtheVet's new home on VA.gov Don’t worry. You won’t lose any stored information. And you can always manage your VA benefits and care by phone, by mail, or in person. But you’ll need to create your Login.gov or ID.me account to access your information and manage your benefits and care online again. Learn more about what to do if you haven't switched to Login.gov or ID.me yet It’s always your choice whether you want to get an account. Your choice won’t affect your eligibility for VA benefits or health care in any way. If you don’t get a Login.gov or ID.me account before we remove the My HealtheVet and DS Logon sign-in options, you won’t be able to access your VA information or manage your benefits and care online. But you can always manage your VA benefits and health care by phone, by mail, or in person. Review our list of helpful VA phone numbers to find the one that matches your specific needs. Get a list of helpful VA phone numbers Or find the phone number and address for your local VA health facility, regional office, cemetery, or other location. Find a VA location near you Yes. Both Login.gov and ID.me require multifactor authentication (MFA) as part of the account set-up process. This extra layer of protection helps us make sure that it’s you trying to use your sign-in account—and not someone pretending to be you. Multifactor authentication is a common practice for many websites and apps. You may already use it to access your email, bank account, or social media accounts. When you set up your Login.gov or ID.me account, you can choose the multifactor authentication option that works best for you. Go to Login.gov’s guide to multifactor authentication options Go to ID.me’s guide to multifactor authentication options Tags All Veterans Sign in Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. Related information VA benefits Records Apply for a printed Veteran ID card, get your VA benefit letters and medical records, and learn how to apply for a discharge upgrade. Need more help? MyVA411 main information line: 800-698-2411 Last updated: June 9, 2025 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov/",
+        "text": "English"
+      },
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov-esp/",
+        "text": "Español"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-create-a-logingov-account-for-va",
+        "text": "Get step-by-step instructions to create a Login.gov account for VA"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-create-an-idme-account-for-va",
+        "text": "Get step-by-step instructions to create an ID.me account for VA"
+      },
+      {
+        "url": "https://www.va.gov/sign-in/",
+        "text": "Go to our VA.gov sign-in page"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-verify-your-identity-for-your-logingov-account",
+        "text": "Get step-by-step instructions to verify your identity for your Login.gov account"
+      },
+      {
+        "url": "https://www.va.gov/resources/verifying-your-identity-on-vagov",
+        "text": "Learn more about verifying your identity for VA"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-verify-your-identity-for-your-idme-account",
+        "text": "Get step-by-step instructions to verify your identity with ID.me"
+      },
+      {
+        "url": "https://www.va.gov/resources/support-for-common-logingov-and-idme-issues",
+        "text": "Get support for common Login.gov and ID.me issues"
+      },
+      {
+        "url": "https://www.va.gov/resources/my-healthevet-on-vagov-what-to-know",
+        "text": "Learn more about My HealtheVet's new home on VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/resources/what-to-do-if-you-havent-switched-to-logingov-or-idme-yet",
+        "text": "Learn more about what to do if you haven't switched to Login.gov or ID.me yet"
+      },
+      {
+        "url": "https://www.va.gov/resources/helpful-va-phone-numbers",
+        "text": "Get a list of helpful VA phone numbers"
+      },
+      {
+        "url": "https://www.va.gov/find-locations",
+        "text": "Find a VA location near you"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/sign-in",
+        "text": "Sign in"
+      },
+      {
+        "url": "https://www.va.gov/resources/signing-in-to-vagov",
+        "text": "Signing in to VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/records",
+        "text": "Records"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/ds-logon-faqs",
+    "title": "DS Logon FAQs | Veterans Affairs",
+    "content": "Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question DS Logon FAQs You can sign in to Defense Department (DOD) websites with a DS Logon account. Keep reading on this page to learn more about DS Logon . What’s Premium DS Logon? Premium DS Logon is a secure account that Veterans and service members can use to sign in to DOD websites, like TRICARE and milConnect. You can also use your DS Logon username and password to sign in to VA.gov and other VA websites through September 30, 2025 . After this date, you'll need to use either a Login.gov or ID.me account to sign in to VA.gov and other VA online services. This change won't affect your ability to use your DS Logon username and password for DOD website. Learn about creating a Login.gov or ID.me account for VA Can I get a DS Logon account? You can get a DS Logon account to sign in to DOD websites if one of these describes you: You’re a Veteran or service member You’re the spouse or adult dependent of a Veteran or service member You’re the surrogate for a Veteran (you have legal authority to make medical decisions for a Veteran) You can learn more about creating DS Logon accounts on the DS Logon website. Learn more on the DS Logon website Will my DS Logon account or password expire? Your DS Logon account will never expire. But you’ll need to create a new password every 60 days. This helps keep your account secure. Create a new password on the DS Logon website Tags All Veterans Sign in Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. Related information VA benefits Health care Apply for VA health care, find out how to access services, and manage your health and benefits online. Need more help? MyVA411 main information line: 800-698-2411 Last updated: July 11, 2023 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/resources/creating-an-account-for-vagov",
+        "text": "Learn about creating a Login.gov or ID.me account for VA"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/sign-in",
+        "text": "Sign in"
+      },
+      {
+        "url": "https://www.va.gov/resources/signing-in-to-vagov",
+        "text": "Signing in to VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/resources/verifying-your-identity-on-vagov",
+        "text": "Verifying your identity on VA.gov"
+      },
+      {
+        "url": "https://www.va.gov/health-care",
+        "text": "Health care"
+      }
+    ]
+  },
+  {
+    "url": "https://www.va.gov/resources/direct-deposit-for-your-va-benefit-payments",
+    "title": "Direct Deposit For Your VA Benefit Payments | Veterans Affairs",
+    "content": "Search resources and support Resources and Support All VA.gov Enter a keyword, phrase, or question Direct deposit for your VA benefit payments Learn about getting your VA benefit payments through direct deposit. If you don’t already have a bank account, the Veterans Benefits Banking Program (VBBP) can connect you with a bank that will work with you to set up an account. If you already have one, find out how to change your direct deposit information. What’s direct deposit? When you sign up for direct deposit, we transfer money electronically to your bank account on the day you get paid. You can choose to get your VA pension payments, disability compensation, and education payments through direct deposit. If you switch from getting paper checks to receiving your payment through direct deposit, you’ll get your payments faster because you won’t be waiting for your check to arrive by mail. You’ll also have access to the funds in your account right away. How do I add or change VA benefit direct deposit information online? You can add or change your direct deposit information for VA disability compensation, pension benefits, or education benefits online. You’ll manage this information in your VA.gov profile. Get step-by-step instructions for changing your direct deposit information online How do I set up direct deposit for VA benefits by phone or in person? Here’s how to set up direct deposit by phone: Call us at 800-827-1000 ( TTY: 711 ). We’re here Monday through Friday, 8:00 a.m. to 9:00 p.m. ET. For international direct deposit updates, call us at 918-781-7550 . We’re here Monday through Friday, 9:00 a.m. to 5:30 p.m. ET. To set up direct deposit in person, go to your nearest VA regional office. Find your nearest VA regional office Note: If you don’t have access to the internet or a phone, you can update your direct deposit information with the Direct Deposit Sign-Up Form (VA Form SF-1199a). Get VA Form SF-1199a to download Can I set up direct deposit for health care travel reimbursement? Yes. You must set up direct deposit to receive your reimbursement payments. Get instructions for how to set up direct deposit for travel pay reimbursement What if I don’t have a bank account, but I want to use direct deposit? The Veterans Benefits Banking Program (VBBP) provides a list of Veteran-friendly banks and credit unions that will work with you to set up an account, or help you qualify for an account, so you can use direct deposit. To get started, call one of the participating banks or credit unions listed on the VBBP website. Be sure to mention the Veterans Benefits Banking Program. Go to the VBBP website for more information Tags All Veterans Payments and debt Good Bad Want to share more feedback? We'll use it to keep improving VA.gov for all Veterans and their families. Complete our 3-question survey. Related information VA benefits Disability File a claim for disability compensation for conditions related to your military service, and manage your benefits over time. Pension Apply for monthly payments for wartime Veterans and survivors with limited or no income who meet certain age and disability requirements. Education and training Apply for and manage your GI Bill and other education benefits to help pay for college and cover expenses while you’re training for a job. Need more help? MyVA411 main information line: 800-698-2411 Last updated: July 24, 2024 Feedback",
+    "links": [
+      {
+        "url": "https://www.va.gov/change-direct-deposit",
+        "text": "Change VA direct deposit information"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-change-direct-deposit-information-for-va-benefits",
+        "text": "Get step-by-step instructions for changing your direct deposit information online"
+      },
+      {
+        "url": "https://www.va.gov/find-locations/",
+        "text": "Find your nearest VA regional office"
+      },
+      {
+        "url": "https://www.va.gov/find-forms/about-form-sf-1199a",
+        "text": "Get VA Form SF-1199a to download"
+      },
+      {
+        "url": "https://www.va.gov/resources/how-to-set-up-direct-deposit-for-va-travel-pay-reimbursement",
+        "text": "Get instructions for how to set up direct deposit for travel pay reimbursement"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/all-veterans",
+        "text": "All Veterans"
+      },
+      {
+        "url": "https://www.va.gov/resources/tag/payments-and-debt",
+        "text": "Payments and debt"
+      },
+      {
+        "url": "https://www.va.gov/disability",
+        "text": "Disability"
+      },
+      {
+        "url": "https://www.va.gov/pension",
+        "text": "Pension"
+      },
+      {
+        "url": "https://www.va.gov/education",
+        "text": "Education and training"
       }
     ]
   }
