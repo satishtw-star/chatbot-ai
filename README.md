@@ -164,7 +164,7 @@ This will:
 View evaluation results and compare model performance:
 
 ```bash
-streamlit run dashboard.py
+streamlit run compare_llm_results.py
 ```
 
 The dashboard shows:
