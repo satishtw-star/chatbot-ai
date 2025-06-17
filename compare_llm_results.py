@@ -18,23 +18,9 @@ query_filter = st.text_input("Filter by query (optional):")
 if query_filter:
     df = df[df['query'].str.contains(query_filter, case=False, na=False)]
 
-# Extract model responses from the combined response
-def split_responses(response):
-    if "Model 1" in response and "Model 2" in response:
-        parts = response.split("Model 2")
-        model1_response = parts[0].replace("Model 1", "").strip()
-        model2_response = parts[1].strip()
-        return model1_response, model2_response
-    return response, response
-
-# Split responses into separate columns
-df[['model1_response', 'model2_response']] = df.apply(
-    lambda row: pd.Series(split_responses(row['response'])), axis=1
-)
-
 # Calculate average scores for each model
 metrics = ['relevancy', 'faithfulness', 'contextual_precision', 
-           'contextual_recall', 'contextual_relevancy', 'conversation_completeness']
+           'contextual_recall', 'contextual_relevancy', 'conversation_completeness', 'call_deflection_effectiveness']
 
 # Sort by any metric
 sort_metric = st.selectbox("Sort by metric:", metrics)
@@ -45,15 +31,16 @@ if st.checkbox("Sort by selected metric"):
 st.header("Model Comparison")
 display_columns = [
     'timestamp', 'query', 
-    'model1_response', 'model2_response'
-] + metrics
+    'model1_response', 'model2_response',
+    'relevancy_1', 'relevancy_2',
+    'faithfulness_1', 'faithfulness_2',
+    'contextual_precision_1', 'contextual_precision_2',
+    'contextual_recall_1', 'contextual_recall_2',
+    'contextual_relevancy_1', 'contextual_relevancy_2',
+    'conversation_completeness', # Conversation completeness applies to overall chat
+    'call_deflection_effectiveness_1', 'call_deflection_effectiveness_2'
+]
 st.dataframe(df[display_columns], use_container_width=True)
-
-# Visualize metric distributions
-st.header("Metric Distributions")
-for metric in metrics:
-    st.subheader(metric.replace('_', ' ').title())
-    st.bar_chart(df[metric])
 
 # Show best/worst examples
 st.header("Best Responses")
@@ -68,8 +55,12 @@ for _, row in best_responses.iterrows():
         st.markdown("**Model 2 Response:**")
         st.markdown(row['model2_response'])
     st.markdown("**Scores:**")
-    for metric in metrics:
-        st.markdown(f"- {metric.replace('_', ' ').title()}: {row[metric]:.2f}")
+    for metric_base in ['relevancy', 'faithfulness', 'contextual_precision', 
+                        'contextual_recall', 'contextual_relevancy', 
+                        'call_deflection_effectiveness']:
+        st.markdown(f"- {metric_base.replace('_', ' ').title()} (Model 1): {row[f'{metric_base}_1']:.2f}")
+        st.markdown(f"- {metric_base.replace('_', ' ').title()} (Model 2): {row[f'{metric_base}_2']:.2f}")
+    st.markdown(f"- Conversation Completeness: {row['conversation_completeness']:.2f}")
     st.markdown("---")
 
 st.header("Worst Responses")
@@ -84,6 +75,10 @@ for _, row in worst_responses.iterrows():
         st.markdown("**Model 2 Response:**")
         st.markdown(row['model2_response'])
     st.markdown("**Scores:**")
-    for metric in metrics:
-        st.markdown(f"- {metric.replace('_', ' ').title()}: {row[metric]:.2f}")
+    for metric_base in ['relevancy', 'faithfulness', 'contextual_precision', 
+                        'contextual_recall', 'contextual_relevancy', 
+                        'call_deflection_effectiveness']:
+        st.markdown(f"- {metric_base.replace('_', ' ').title()} (Model 1): {row[f'{metric_base}_1']:.2f}")
+        st.markdown(f"- {metric_base.replace('_', ' ').title()} (Model 2): {row[f'{metric_base}_2']:.2f}")
+    st.markdown(f"- Conversation Completeness: {row['conversation_completeness']:.2f}")
     st.markdown("---") 

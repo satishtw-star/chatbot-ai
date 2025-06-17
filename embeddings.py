@@ -27,23 +27,20 @@ class CustomOpenAIEmbeddingFunction:
 
 class DocumentProcessor:
     def __init__(self, collection_name: str = "va_docs"):
-        self.client = chromadb.Client()
+        self.client = chromadb.PersistentClient(path="./chroma_db")
         self.embedding_function = CustomOpenAIEmbeddingFunction()
         
-        # Try to get existing collection, create if it doesn't exist
-        try:
-            self.collection = self.client.get_collection(
-                name=collection_name,
-                embedding_function=self.embedding_function
-            )
-        except:
-            # Create new collection if it doesn't exist
-            self.collection = self.client.create_collection(
-                name=collection_name,
-                embedding_function=self.embedding_function
-            )
-            # Process documents if this is a new collection
+        self.collection = self.client.get_or_create_collection(
+            name=collection_name,
+            embedding_function=self.embedding_function
+        )
+
+        # Check if the collection is empty and process documents if it is
+        if self.collection.count() == 0:
+            print(f"Collection '{collection_name}' is empty or newly created. Processing documents...")
             self.process_documents("va_content.json")
+        else:
+            print(f"Collection '{collection_name}' already exists and contains {self.collection.count()} documents. Skipping document processing.")
 
     def process_documents(self, json_file: str, chunk_size: int = 300):
         """
@@ -107,8 +104,9 @@ class DocumentProcessor:
         } for doc, metadata in zip(results['documents'][0], results['metadatas'][0])]
 
 if __name__ == "__main__":
+    # Initialize with PersistentClient for direct script execution
     processor = DocumentProcessor()
-    processor.process_documents("va_content.json")
+    # No need to call process_documents here, it's handled in __init__ now
     # Test query
     results = processor.query_documents("How do I apply for VA health care?")
     for result in results:

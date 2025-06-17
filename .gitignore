@@ -39,3 +39,4 @@ ENV/
 *.swo
 
 .env
+chroma_db/
