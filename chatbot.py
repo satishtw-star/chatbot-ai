@@ -295,8 +295,15 @@ def main():
             {"timestamp": datetime.now().isoformat(), "role": "assistant", "content": f"Model 1 ({model1}): {response1}\nModel 2 ({model2}): {response2}", "context": context}
         )
 
+        # Append this session's chat history to the file, do not overwrite
+        if os.path.exists('chat_history.json'):
+            with open('chat_history.json', 'r') as f:
+                all_history = json.load(f)
+        else:
+            all_history = []
+        all_history.append(st.session_state.chat_history)
         with open('chat_history.json', 'w') as f:
-            json.dump(st.session_state.chat_history, f, indent=2)
+            json.dump(all_history, f, indent=2)
 
 if __name__ == "__main__":
     main() 
